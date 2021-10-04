@@ -75,7 +75,6 @@ export default function Home() {
   }
 
   const changeOption = (event) => {
-    event.preventDefault();
     const opt = event.target.name
     if (opt === option) {
       setOption('')
@@ -89,7 +88,7 @@ export default function Home() {
   useEffect(() => {
     getProfile();
     getRepositories();
-  });
+  }, []);
 
   return (
     <div className="columns has-background-link-light is-family-sans-serif">
