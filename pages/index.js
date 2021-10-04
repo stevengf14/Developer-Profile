@@ -82,10 +82,8 @@ export default function Home() {
     getRepositories();
   });
 
-
-
   return (
-    <div className="columns has-background-grey-lighter">
+    <div className="columns has-background-link-light is-family-sans-serif">
       <div className="column is-three-fifths is-offset-one-fifth">
         <Head>
           <title>Steven's Profile</title>
@@ -96,11 +94,11 @@ export default function Home() {
           <div className="hero-body has-background-white">
             <Header />
             <div className="hero-foot">
-              <nav className="tabs is-toggle is-fullwidth">
+              <nav className="tabs is-toggle is-fullwidth has-background-black">
                 <div className="container">
                   <ul>
-                    <li><a name="profile" onClick={changeOption}>Profile</a></li>
-                    <li><a name="repositories" onClick={changeOption}>Repositories</a></li>
+                    <li><a className="has-text-white" name="profile" onClick={changeOption}>Profile</a></li>
+                    <li><a className="has-text-white" name="repositories" onClick={changeOption}>Repositories</a></li>
                   </ul>
                 </div>
               </nav>
