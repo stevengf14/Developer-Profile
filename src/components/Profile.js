@@ -3,7 +3,7 @@ import Momment from 'react-moment';
 export default function Profile(props) {
     const { profile, key } = props;
     return (
-        <div className=" pt-5 pl-5 pr-5 pb-5">
+        <div className="pt-5 pl-5 pr-5 pb-5">
             <p><strong>Name: </strong>{profile.name}</p>
             <p><strong>User Name: </strong>{profile.user}</p>
             <p><strong>URL: </strong><a href={profile.url}>{profile.url}</a></p>

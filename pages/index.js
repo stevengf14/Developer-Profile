@@ -1,18 +1,26 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import styles from '../assets/styles/Home.module.css'
 import axios from 'axios';
 import Global from '../assets/Global';
 import Header from '../src/components/Header'
 import Repository from '../src/components/Repository';
 import Profile from '../src/components/Profile';
+import { SiLinkedin } from 'react-icons/si';
+import { SiFacebook } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
+import { SiInstagram } from 'react-icons/si';
 
 export default function Home() {
 
   /* URLs services */
   const url_repositories = Global.repositories;
   const url_profile = Global.profile;
+  
+  /* Social Media*/
+  const facebook = Global.faceboook;
+  const instagram = Global.instagram;
+  const linkedin = Global.linkedin;
+  const git = Global.git; 
 
   /* states */
   const [repositories, setRepositories] = useState([]);
@@ -67,6 +75,7 @@ export default function Home() {
   }
 
   const changeOption = (event) => {
+    event.preventDefault();
     const opt = event.target.name
     if (opt === option) {
       setOption('')
@@ -91,49 +100,60 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="container">
-          <div className="hero-body has-background-white">
-            <Header />
-            <div className="hero-foot">
-              <nav className="tabs is-toggle is-fullwidth has-background-black">
-                <div className="container">
-                  <ul>
-                    <li><a className="has-text-white" name="profile" onClick={changeOption}>Profile</a></li>
-                    <li><a className="has-text-white" name="repositories" onClick={changeOption}>Repositories</a></li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-            <div className="hero-body">
-              <div className="column">
-                {
-                  option === 'profile' &&
-                  <Profile profile={profile}></Profile>
-                }
+          <Header />
+          <div className="hero-foot">
+            <nav className="tabs is-toggle is-fullwidth has-background-black">
+              <div className="container">
+                <ul>
+                  <li><a className="has-text-white" name="profile" onClick={changeOption}>Profile</a></li>
+                  <li><a className="has-text-white" name="repositories" onClick={changeOption}>Repositories</a></li>
+                </ul>
               </div>
-              <div className="column">
-                {
-                  option === 'repositories' &&
-                  repositories.map((repository, index) => <Repository repository={repository} key={`repository-${index}`}></Repository>)
-                }
-              </div>
-            </div>
+            </nav>
           </div>
+          {
+            option != '' ? (
+              <div className="hero-body has-background-white">
+                <div className="column">
+                  {
+                    option === 'profile' &&
+                    <Profile profile={profile}></Profile>
+                  }
+                </div>
+                <div className="column">
+                  {
+                    option === 'repositories' &&
+                    repositories.map((repository, index) => <Repository repository={repository} key={`repository-${index}`}></Repository>)
+                  }
+                </div>
+              </div>
+            ) : (
+              <div className="pb-6"></div>
+            )
+          }
         </main>
-
-        <footer className="hero-foot">
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <span className={styles.logo}>
-              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </span>
-          </a>
+        <footer className="hero-foot is-align-items-end pt-6 pb-6">
+          <p>
+            <strong>Developer Profile</strong> by Steven Guamán. October 2021
+          </p>
+          <section className="pt-4">
+            <div className="columns ">
+              <div className="column is-1">
+                <a href={linkedin} target="_blank"><SiLinkedin /></a>
+              </div>
+              <div className="column is-1">
+                <a href={git} target="_blank"><SiGithub /></a>
+              </div>
+              <div className="column is-1">
+                <a href={facebook} target="_blank"><SiFacebook /></a>
+              </div>
+              <div className="column is-1">
+                <a href={instagram} target="_blank"><SiInstagram /></a>
+              </div>
+            </div>
+          </section>
         </footer>
       </div>
-
     </div>
   )
 }
