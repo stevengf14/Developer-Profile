@@ -139,16 +139,16 @@ export default function Home() {
           <section className="pt-4">
             <div className="columns ">
               <div className="column is-1">
-                <a href={linkedin} target="_blank"><SiLinkedin /></a>
+                <a href={linkedin} target="_blank" rel="noreferrer"><SiLinkedin /></a>
               </div>
               <div className="column is-1">
-                <a href={git} target="_blank"><SiGithub /></a>
+                <a href={git} target="_blank" rel="noreferrer"><SiGithub /></a>
               </div>
               <div className="column is-1">
-                <a href={facebook} target="_blank"><SiFacebook /></a>
+                <a href={facebook} target="_blank" rel="noreferrer"><SiFacebook /></a>
               </div>
               <div className="column is-1">
-                <a href={instagram} target="_blank"><SiInstagram /></a>
+                <a href={instagram} target="_blank" rel="noreferrer"><SiInstagram /></a>
               </div>
             </div>
           </section>
