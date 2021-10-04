@@ -15,12 +15,12 @@ export default function Home() {
   /* URLs services */
   const url_repositories = Global.repositories;
   const url_profile = Global.profile;
-  
+
   /* Social Media*/
   const facebook = Global.faceboook;
   const instagram = Global.instagram;
   const linkedin = Global.linkedin;
-  const git = Global.git; 
+  const git = Global.git;
 
   /* states */
   const [repositories, setRepositories] = useState([]);
@@ -131,26 +131,28 @@ export default function Home() {
             )
           }
         </main>
-        <footer className="hero-foot is-align-items-end pt-6 pb-6">
-          <p>
-            <strong>Developer Profile</strong> by Steven Guamán. October 2021
-          </p>
-          <section className="pt-4">
-            <div className="columns ">
-              <div className="column is-1">
-                <a href={linkedin} target="_blank" rel="noreferrer"><SiLinkedin /></a>
+        <footer className="hero-foot pt-6 pb-6">
+          <div className="columns">
+          <div className=" column is-half is-three-fifths is-offset-one-fifth">
+            <p>
+              <strong>Developer Profile</strong> by Steven Guamán. October 2021
+            </p>
+              <div className="columns">
+                <div className="column is-1">
+                  <a href={linkedin} target="_blank" rel="noreferrer"><SiLinkedin /></a>
+                </div>
+                <div className="column is-1">
+                  <a href={git} target="_blank" rel="noreferrer"><SiGithub /></a>
+                </div>
+                <div className="column is-1">
+                  <a href={facebook} target="_blank" rel="noreferrer"><SiFacebook /></a>
+                </div>
+                <div className="column is-1">
+                  <a href={instagram} target="_blank" rel="noreferrer"><SiInstagram /></a>
+                </div>
               </div>
-              <div className="column is-1">
-                <a href={git} target="_blank" rel="noreferrer"><SiGithub /></a>
-              </div>
-              <div className="column is-1">
-                <a href={facebook} target="_blank" rel="noreferrer"><SiFacebook /></a>
-              </div>
-              <div className="column is-1">
-                <a href={instagram} target="_blank" rel="noreferrer"><SiInstagram /></a>
-              </div>
-            </div>
-          </section>
+          </div>
+          </div>
         </footer>
       </div>
     </div>
