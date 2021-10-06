@@ -23,7 +23,7 @@ export default function Header() {
                         <div className="column is-two-quarters">
                             <div className="has-text-left">
                                 <p className="title is-5 has-text-white">STEVEN GUAMÁN FIGUEROA</p>
-                                <p><small><a className="has-text-primary" href="github.com/stevengf14">github.com/stevengf14</a></small></p>
+                                <p><small><a className="has-text-primary" href="https://github.com/stevengf14">github.com/stevengf14</a></small></p>
                                 <section>
                                     <p>Systems Engineer - Software Developer</p>
                                     <p>3 years experience in software development.</p>
