@@ -5,18 +5,13 @@ import Global from '../assets/Global';
 import Header from '../src/components/Header'
 import Repository from '../src/components/Repository';
 import Profile from '../src/components/Profile';
+import Footer from '../src/components/Footer';
 
 export default function Home() {
 
   /* URLs services */
   const url_repositories = Global.repositories;
   const url_profile = Global.profile;
-
-  /* Social Media*/
-  const facebook = Global.faceboook;
-  const instagram = Global.instagram;
-  const linkedin = Global.linkedin;
-  const git = Global.git;
 
   /* states */
   const [repositories, setRepositories] = useState([]);
@@ -58,6 +53,9 @@ export default function Home() {
               name: repository.name,
               full_name: repository.full_name,
               html_url: repository.html_url,
+              created: repository.created_at,
+              updated: repository.updated_at,
+              pushed: repository.pushed_at
             }
           });
           setRepositories(allRepos);
@@ -126,8 +124,8 @@ export default function Home() {
               <div className="pb-6"></div>
             )
           }
+          <Footer />
         </main>
-        <Footer/>
       </div>
     </div>
   )
