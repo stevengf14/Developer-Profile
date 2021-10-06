@@ -18,10 +18,10 @@ export default function Footer() {
                         <strong>Developer Profile</strong> by Steven Guamán. October 2021
                     </p>
                     <div className="columns is-centered is-multiline pt-4">
-                        <a className="pr-4" href={linkedin} target="_blank" rel="noreferrer"><SiLinkedin /></a>
-                        <a className="pr-4" href={git} target="_blank" rel="noreferrer"><SiGithub /></a>
-                        <a className="pr-4" href={facebook} target="_blank" rel="noreferrer"><SiFacebook /></a>
-                        <a className="pr-4" href={instagram} target="_blank" rel="noreferrer"><SiInstagram /></a>
+                        <a className="pr-4" href={linkedin} rel="noreferrer"><SiLinkedin /></a>
+                        <a className="pr-4" href={git} rel="noreferrer"><SiGithub /></a>
+                        <a className="pr-4" href={facebook} rel="noreferrer"><SiFacebook /></a>
+                        <a className="pr-4" href={instagram} rel="noreferrer"><SiInstagram /></a>
                     </div>
                 </div>
         </footer>
