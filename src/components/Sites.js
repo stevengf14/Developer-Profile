@@ -18,7 +18,7 @@ export default function Sites() {
             <div className="card has-text-grey-dark mb-3 pb4 pt-5 pl-5 pr-3">
                 <p className="title is-5">Sports Data</p>
                 <div className="pl-5 pb-5">
-                    <p><strong>Description: </strong>This project consumes an API to get "La Liga" and "Premier League" teams.</p>
+                    <p><strong>Description: </strong>This project consumes an API to get La Liga and Premier League teams.</p>
                     <p><strong>URL: </strong><a href="https://focused-mestorf-3e07d4.netlify.app/">https://focused-mestorf-3e07d4.netlify.app/</a></p>
                 </div>
             </div>
