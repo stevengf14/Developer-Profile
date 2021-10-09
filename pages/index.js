@@ -6,6 +6,7 @@ import Header from '../src/components/Header'
 import Repository from '../src/components/Repository';
 import Profile from '../src/components/Profile';
 import Footer from '../src/components/Footer';
+import Sites from '../src/components/Sites';
 
 export default function Home() {
 
@@ -76,6 +77,8 @@ export default function Home() {
       setOption('profile');
     } else if (opt === 'repositories') {
       setOption('repositories');
+    } else if (opt === 'sites') {
+      setOption('sites');
     }
   }
 
@@ -100,6 +103,7 @@ export default function Home() {
                 <ul>
                   <li><a className="has-text-white" name="profile" onClick={changeOption}>Profile</a></li>
                   <li><a className="has-text-white" name="repositories" onClick={changeOption}>Repositories</a></li>
+                  <li><a className="has-text-white" name="sites" onClick={changeOption}>Sites</a></li>
                 </ul>
               </div>
             </nav>
@@ -117,6 +121,12 @@ export default function Home() {
                   {
                     option === 'repositories' &&
                     repositories.map((repository, index) => <Repository repository={repository} key={`repository-${index}`}></Repository>)
+                  }
+                </div>
+                <div className="column">
+                  {
+                    option === 'sites' &&
+                    <Sites />
                   }
                 </div>
               </div>
